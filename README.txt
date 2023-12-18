@@ -12,6 +12,7 @@ This repository contains my solutions and progress for the Advent of Code 2023 c
 - [Advent of Code](#advent-of-code)
 - [Contributing](#contributing)
 - [License](#license)
+
 ## Getting Started
 
 1. Clone the repository:
@@ -21,6 +22,7 @@ This repository contains my solutions and progress for the Advent of Code 2023 c
 
    //Open the project in your IDE of choice (Intellij, Eclipse, etc.)
    //Explore the solutions in src/adventCode2023
+   
 ## Project Structure
 
 
@@ -42,3 +44,5 @@ adventCode2023
 ├── .gitignore    
 ├── .project    
 ├── README.md    
+
+	//to run a specific day's solution, execute the **main** method in the respective **Part1** or **Part2** class.
