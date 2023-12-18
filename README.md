@@ -19,10 +19,10 @@ This repository contains my solutions and progress for the Advent of Code 2023 c
 
    ```bash
    git clone https://github.com/Antsevs/2023AdventCode.git
-
+	```
    //Open the project in your IDE of choice (Intellij, Eclipse, etc.)
    //Explore the solutions in src/adventCode2023
-   
+
 ## Project Structure
 
 
