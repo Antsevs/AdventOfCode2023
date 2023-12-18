@@ -21,3 +21,24 @@ This repository contains my solutions and progress for the Advent of Code 2023 c
 
    //Open the project in your IDE of choice (Intellij, Eclipse, etc.)
    //Explore the solutions in src/adventCode2023
+## Project Structure
+
+
+adventCode2023    
+│    
+├── .settings    
+├── bin    
+├── puzzleInputFiles/    
+├── src/    
+│	├── day01/    
+│	│	├── Part1.java    
+│	│	├── Part2.java    
+│	├── day02/    
+│	│	├── Part1.java    
+│	│	├── Part2.java    
+│	├── ...    
+│    
+├── .classpath    
+├── .gitignore    
+├── .project    
+├── README.md    
