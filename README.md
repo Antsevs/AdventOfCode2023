@@ -20,8 +20,8 @@ This repository contains my solutions and progress for the Advent of Code 2023 c
    ```bash
    git clone https://github.com/Antsevs/2023AdventCode.git
 	```
-   //Open the project in your IDE of choice (Intellij, Eclipse, etc.)
-   //Explore the solutions in src/adventCode2023
+   /* Open the project in your IDE of choice (Intellij, Eclipse, etc.)
+   /* Explore the solutions in src/adventCode2023
 
 ## Project Structure
 
@@ -45,4 +45,4 @@ adventCode2023
 ├── .project    
 ├── README.md    
 
-	//to run a specific day's solution, execute the **main** method in the respective **Part1** or **Part2** class.
+	/* to run a specific day's solution, execute the **main** method in the respective **Part1** or **Part2** class.
