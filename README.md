@@ -46,26 +46,26 @@ adventCode2023
 ├── .project    
 ├── README.md    
 
-	*Each day's solution has its own package(**day01**, **day02**, etc.) 
-	with seperate files for each part*
+*Each day's solution has its own package(**day01**, **day02**, etc.) 
+with seperate files for each part*
 
 ## Running the Solutions
 
-	to run a specific day's solution, execute the **main** method in the 
-	respective **Part1** or **Part2** class.
+to run a specific day's solution, execute the **main** method in the 
+respective **Part1** or **Part2** class.
 
 ## Advent of Code
 
-	[Advent of Code](https://adventofcode.com/) is an annual coding 
-	challenge that takes place in December. It consists of daily programming 
-	puzzles that can be solved using any programming language.
+[Advent of Code](https://adventofcode.com/) is an annual coding 
+challenge that takes place in December. It consists of daily programming 
+puzzles that can be solved using any programming language.
 
 ## Contributing
 
-	If you have any input or a better solution to any of the puzzles 
-	feel free to open an issue or submit a pull request!
+If you have any input or a better solution to any of the puzzles 
+feel free to open an issue or submit a pull request!
 	
 ## License
 
-	There is no license, do with my code what you please! 
-	(please don't topple any government structures)
+There is no license, do with my code what you please! 
+(please don't topple any government structures)
