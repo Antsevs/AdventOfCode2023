@@ -33,13 +33,13 @@ adventCode2023
 ├── bin    
 ├── puzzleInputFiles/    
 ├── src/    
-│	├── day01/    
-│	│	├── Part1.java    
-│	│	├── Part2.java    
-│	├── day02/    
-│	│	├── Part1.java    
-│	│	├── Part2.java    
-│	├── ...    
+│    ├── day01/    
+│    │    ├── Part1.java    
+│    │    ├── Part2.java    
+│    ├── day02/    
+│    │    ├── Part1.java    
+│    │    ├── Part2.java    
+│    ├── ...    
 │    
 ├── .classpath    
 ├── .gitignore    
