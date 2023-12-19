@@ -52,7 +52,7 @@ with seperate files for each part*
 ## Running the Solutions
 
 to run a specific day's solution, execute the **main** method in the 
-respective **Part1** or **Part2** class.
+respective **Part** or **Part2** class.
 
 ## Advent of Code
 

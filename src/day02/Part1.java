@@ -31,6 +31,7 @@ public class Part1 {
 		char currentID3;
 		int digitCount;
 		int colonCheck;
+		int result = 0;
 		List<String> strList = new ArrayList<String>();
 		List<String> gameIDs = new ArrayList<String>();
 		try {
@@ -73,39 +74,49 @@ public class Part1 {
 					colonCheck = -1;
 				}
 				//check which cube the number pertains to and add it to its variable
-				if(Character.isDigit(currentStr.charAt(i))) {
+				if(Character.isDigit(currentStr.charAt(i)) && colonCheck == -1) {
 					//check for two digit numbers
-					if(currentStr.charAt(i+3) == 'g') {
+					if(currentStr.charAt(i+3) == 'g' && currentStr.charAt(i+4) == 'r' && currentStr.charAt(i+5) == 'e') {
 						currentNum = ("" + currentStr.charAt(i) + currentStr.charAt(i+1)).trim();
-						green += Integer.parseInt(currentNum);
-						System.out.println("green: " + green);
-					} else if(currentStr.charAt(i+3) == 'r') {
+						if(green < Integer.parseInt(currentNum)) {
+							green = Integer.parseInt(currentNum);
+							//System.out.println("green: " + green);
+						}
+					} else if(currentStr.charAt(i+3) == 'r' && currentStr.charAt(i+4) == 'e' && currentStr.charAt(i+5) == 'd') {
 						currentNum = ("" + currentStr.charAt(i) + currentStr.charAt(i+1)).trim();
-						red += Integer.parseInt(currentNum);
-						System.out.println("red: " + red);
-					} else if(currentStr.charAt(i+3) == 'b') {
+						if(red < Integer.parseInt(currentNum)) {
+							red = Integer.parseInt(currentNum);
+							//System.out.println("red: " + red);
+						}
+					} else if(currentStr.charAt(i+3) == 'b' && currentStr.charAt(i+4) == 'l' && currentStr.charAt(i+5) == 'u') {
 						currentNum = ("" + currentStr.charAt(i) + currentStr.charAt(i+1)).trim();
-						blue += Integer.parseInt(currentNum);
-						System.out.println("blue: " + blue);
+						if(blue < Integer.parseInt(currentNum)) {
+							blue = Integer.parseInt(currentNum);
+							//System.out.println("blue: " + blue);
+						}
 					//check for single digit integers
-					} else if(currentStr.charAt(i+2) == 'g' && !Character.isDigit(currentStr.charAt(i-1))){
+					} else if(currentStr.charAt(i+2) == 'g' && currentStr.charAt(i+3) == 'r' && currentStr.charAt(i+4) == 'e'&& !Character.isDigit(currentStr.charAt(i-1))){
 						currentNum = ("" + currentStr.charAt(i)).trim();
-						green += Integer.parseInt(currentNum);
-						System.out.println("green: " + green);
-					} else if(currentStr.charAt(i+2) == 'r' && !Character.isDigit(currentStr.charAt(i-1))){
+						if(green < Integer.parseInt(currentNum)) {
+							green = Integer.parseInt(currentNum);
+							//System.out.println("green: " + green);
+						}
+					} else if(currentStr.charAt(i+2) == 'r' && currentStr.charAt(i+3) == 'e' && currentStr.charAt(i+4) == 'd'&& !Character.isDigit(currentStr.charAt(i-1))){
 						currentNum = ("" + currentStr.charAt(i)).trim();
-						red += Integer.parseInt(currentNum);
-						System.out.println("red: " + red);
-					} else if(currentStr.charAt(i+2) == 'b' && !Character.isDigit(currentStr.charAt(i-1))){
+						if(red < Integer.parseInt(currentNum)) {
+							red = Integer.parseInt(currentNum);
+							//System.out.println("red: " + red);
+						}
+					} else if(currentStr.charAt(i+2) == 'b' && currentStr.charAt(i+3) == 'l' && currentStr.charAt(i+4) == 'u'&& !Character.isDigit(currentStr.charAt(i-1))){
 						currentNum = ("" + currentStr.charAt(i)).trim();
-						blue += Integer.parseInt(currentNum);
-						System.out.println("blue: " + blue);
+						if(blue < Integer.parseInt(currentNum)) {
+							blue = Integer.parseInt(currentNum);
+							//System.out.println("blue: " + blue);
+						}
 					}
 				}
-
-				
 			}
-			//store each game ID number
+			//store each possible gameID number
 			if(red <= 12 && green <= 13 && blue <= 14) {
 				if(digitCount == 1) {
 					gameIDs.add(currentID + "");
@@ -115,10 +126,11 @@ public class Part1 {
 					gameIDs.add(currentID + "" + currentID2 + "" + currentID3);
 				}
 			}
-			//System.out.println(gameIDs);
-			for(int i = 0; i <strList.get(n).length(); i++) {
-				
-			}
 		}
+		System.out.println(gameIDs);
+		for(int count = 0; count < gameIDs.size(); count++) {
+			result += Integer.parseInt(gameIDs.get(count));
+		}
+		System.out.println(result);
 	}
 }
