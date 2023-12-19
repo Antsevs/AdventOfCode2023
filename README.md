@@ -26,26 +26,26 @@ This repository contains my solutions and progress for the Advent of Code 2023 c
 
 ## Project Structure
 
-
-adventCode2023    
-│    
-├── .settings    
-├── bin    
-├── puzzleInputFiles/    
-├── src/    
-│    ├── day01/    
-│    │    ├── Part1.java    
-│    │    ├── Part2.java    
-│    ├── day02/    
-│    │    ├── Part1.java    
-│    │    ├── Part2.java    
-│    ├── ...    
-│    
-├── .classpath    
-├── .gitignore    
-├── .project    
-├── README.md    
-
+```plaintext
+adventCode2023
+│
+├── .settings
+├── bin
+├── puzzleInputFiles/
+├── src/
+│   ├── day01/
+│   │   ├── Part1.java
+│   │   ├── Part2.java
+│   ├── day02/
+│   │   ├── Part1.java
+│   │   ├── Part2.java
+│   ├── ...
+│
+├── .classpath
+├── .gitignore
+├── .project
+├── README.md
+```
 *Each day's solution has its own package(**day01**, **day02**, etc.) 
 with seperate files for each part*
 
