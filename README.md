@@ -51,8 +51,11 @@ with seperate files for each part*
 
 ## Running the Solutions
 
-to run a specific day's solution, execute the **main** method in the 
+To run a specific day's solution, execute the **main** method in the 
 respective **Part** or **Part2** class.
+
+If you want to view or alter any of the input for a puzzle, all input 
+files are found in **puzzleInputFiles**, organized by day.
 
 ## Advent of Code
 
