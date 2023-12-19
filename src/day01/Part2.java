@@ -18,7 +18,7 @@ public class Part2 {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\sevar\\eclipse-workspace\\adventCode2023\\puzzleInputFiles\\week1_2_input"));
+		BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\sevar\\eclipse-workspace\\adventCode2023\\puzzleInputFiles\\day01\\puzzleInput01_2"));
 		String str;
 		char num2 = 0;
 		char num1 = 0;
@@ -131,6 +131,6 @@ public class Part2 {
 		for(int j = 0; j < numList.size(); j++) {
 			result += numList.get(j);
 		}
-		System.out.println(result);
+		System.out.println("The sum of all the combined integers is: " + result);
 	}
 }
