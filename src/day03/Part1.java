@@ -44,10 +44,13 @@ public class Part1 {
 
 	    // iterate through each line
 	    for (int n = 0; n < data.size(); n++) {
-	        currentStr = data.get(n);
+	    	currentStr = data.get(n);
+	       // System.out.println(currentStr);
 	        // if there is a line above, set to aboveStr, if there is a line below, set to belowStr
 	        belowStr = (n + 1 < data.size()) ? data.get(n + 1) : "";
+	       // System.out.println(belowStr + "below");
 	        aboveStr = (n - 1 >= 0) ? data.get(n - 1) : "";
+	       // System.out.println(aboveStr + "above");
 
 	        int numInt = 0;
 	        String numStr = "";
@@ -56,44 +59,24 @@ public class Part1 {
 
 	        // iterate through each character
 	        for (int i = 0; i < currentStr.length(); i++) {
-	            // if character is a digit, add to numStr
+	           numInt = 0;
+	        	// if character is a digit, add to numStr
 	            if (Character.isDigit(currentStr.charAt(i))) {
 	                numStr += currentStr.charAt(i);
+	                System.out.println(numStr);
 	                digitCount++;
-	                index = i - digitCount;
+	                index = i - (digitCount + 1);
 	            } else if (!numStr.isEmpty()) {
-	                numInt = Integer.parseInt(numStr);
-	                // check if the number touches a symbol
-	                if (index >= 0 && (charIsSymbol(currentStr.charAt(index)) || charIsSymbol(currentStr.charAt(i)))) {
-	                    partNums.add(numInt);
-	                } else if (index >= 0 && aboveStr.length() > index) {
-	                    // check for symbols in the line above
-	                    if (charIsSymbol(aboveStr.charAt(index))) {
-	                        partNums.add(numInt);
-	                    }
-	                } else if (index >= 0 && belowStr.length() > index) {
-	                    // check for symbols in the line below
-	                    if (charIsSymbol(belowStr.charAt(index))) {
-	                        partNums.add(numInt);
-	                    }
-	                }
-	                numStr = "";
-	                digitCount = 0;
+	            	//check if sameline connection
+	            	if(index >= 0 && (charIsSymbol(currentStr.charAt(index)) || charIsSymbol(currentStr.charAt(i)))) {
+	            		numInt = Integer.parseInt(numStr);
+	            		partNums.add(numInt);
+	            		System.out.println(partNums);
+	            		numStr = "";
+	            	}
 	            }
 	        }
-	        // check if there is a number at the end of the line
-	        if (!numStr.isEmpty()) {
-	            numInt = Integer.parseInt(numStr);
-	            partNums.add(numInt);
-	        }
 	    }
-
-	    int result = 0;
-	    for (int k = 0; k < partNums.size(); k++) {
-	        result += partNums.get(k);
-	    }
-	    System.out.println(partNums);
-	    System.out.println(result);
 	}
 	
 	public static boolean charIsSymbol(char c) {
