@@ -71,12 +71,14 @@ public class Part1 {
 	            	if(index >= 0 && (charIsSymbol(currentStr.charAt(index)) || charIsSymbol(currentStr.charAt(i)))) {
 	            		numInt = Integer.parseInt(numStr);
 	            		partNums.add(numInt);
-	            		System.out.println(partNums);
 	            		numStr = "";
 	            	}
 	            }
+	            numInt = 0;
+	            numStr = "";
 	        }
 	    }
+	    System.out.println(partNums);	
 	}
 	
 	public static boolean charIsSymbol(char c) {
